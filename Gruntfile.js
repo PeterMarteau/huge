@@ -1,3 +1,7 @@
+sassFiles = {
+    'public/css/vendor.css': 'sass/_vendor.scss'
+}
+
 module.exports = function(grunt) {
 
 grunt.initConfig({
@@ -23,8 +27,27 @@ grunt.initConfig({
        'public/js/vendor.min.js': ['public/js/vendor.js']
       }
     }
-    
-  }
+  },
+  sass: {
+            dev: {
+                options: {
+                    style: 'expanded'
+                },
+                files: sassFiles
+            },
+            dist: {
+                options: {
+                    style: 'compressed'
+                },
+                files: sassFiles
+            }
+        },
+        watch: {
+            sass: {
+                files: 'sass/*.scss',
+                tasks: ['sass:dev']
+            }
+        }
   });
 // Load grunt plugins.
  grunt.loadNpmTasks('grunt-autoprefixer');
@@ -33,4 +56,5 @@ grunt.initConfig({
  grunt.loadNpmTasks('grunt-contrib-watch');
  grunt.loadNpmTasks('grunt-contrib-concat');
  grunt.loadNpmTasks('grunt-contrib-sass');
+     grunt.registerTask('buildcss', ['sass:dist']);
 };
