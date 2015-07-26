@@ -20,6 +20,13 @@ grunt.initConfig({
       ],
       dest: 'public/js/vendor.js',
     },
+    css: {
+    src: ['bower_components/datatables/media/css/jquery.dataTables.css',
+    'bower_components/select2/dist/css/select2.css',
+    'public/css/vendor.css'
+    ],
+    dest: 'public/css/vendor_complete.css'
+  }
   },
   uglify: {
   	 my_target: {

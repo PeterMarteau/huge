@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "dependencies": {
         "jquery": "master",
+        "jquery-ui": "master",
         "bootstrap-sass" : "master",
         "datatables" : "master",
         "select2" : "master",
