@@ -1,0 +1,12 @@
+{
+    "name": "Bens Test",
+    "version": "0.0.1",
+    "dependencies": {
+        "jquery": "master",
+        "underscore": "master",
+        "bootstrap" : "master",
+        "datatables" : "master",
+        "select2" : "master",
+        "ckeditor" : "master"
+    }
+}
